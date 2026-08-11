@@ -1,5 +1,5 @@
-const imgRectangle3 = "http://localhost:3845/assets/8f921fa53094c01cc7dcad1da9e6a1d812c6f553.png";
-const imgRectangle4 = "http://localhost:3845/assets/81c0921d5fbecce39f36059bab60bd75241eff54.svg";
+const imgRectangle3 = "/assets/feature-img-main.png";
+const imgRectangle4 = "/assets/feature-img-overlay.svg";
 
 const features = [
   {

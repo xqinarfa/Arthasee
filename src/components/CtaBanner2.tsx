@@ -1,4 +1,4 @@
-const imgDivServiceCard = "http://localhost:3845/assets/cc694dfb24d4bbaa70e8ca66c499a78ea28a2690.png";
+const imgDivServiceCard = "/assets/service-card-1.png";
 
 export default function CtaBanner2() {
   return (

@@ -2,15 +2,30 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const imgArthaseeLogo11 = "http://localhost:3845/assets/e15874c83da0e544d9e1c3c8cdb677e0bfd25054.png";
+const imgArthaseeLogo11 = "/assets/logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      setScrolled(currentScrollY > 20);
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setIsVisible(false);
+        setMenuOpen(false); // Optionally close menu when scrolling down
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,18 +40,23 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menuOpen]);
 
-  const navLinks = ["HOME", "SERVICES", "ABOUT", "PRICING", "PAGES", "CONTACT"];
+  const navLinks = [
+    { label: "HOME", href: "#home" },
+    { label: "SERVICES", href: "#services" },
+    { label: "ABOUT", href: "#about" },
+    { label: "PRICING", href: "#pricing" },
+    { label: "CONTACT", href: "#contact" },
+  ];
 
   return (
     <header
-      className={`header-animate sticky top-0 z-50 w-full transition-all duration-300 ease-in-out ${
-        scrolled 
-          ? "bg-[#111]/70 backdrop-blur-md shadow-[0_2px_24px_rgba(0,0,0,0.4)] border-b border-white/10" 
-          : "bg-[#111]"
-      }`}
+      className={`header-animate fixed top-0 left-0 z-50 w-full transition-all duration-300 ease-in-out ${scrolled
+        ? "bg-[#111]/70 backdrop-blur-md shadow-[0_2px_24px_rgba(0,0,0,0.4)] border-b border-white/10"
+        : "bg-transparent"
+        } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
       data-name="header.header"
     >
-      <div className="mx-auto flex items-center justify-between px-5 py-4 max-w-[1240px]">
+      <div className="mx-auto flex items-center justify-between px-5 py-4 w-full">
         {/* Logo */}
         <div className="flex items-center gap-2 shrink-0">
           <div className="relative size-[40px] shrink-0">
@@ -48,7 +68,7 @@ export default function Header() {
           </div>
           <span
             className="font-extrabold text-[22px] text-white tracking-[1px] leading-none"
-            
+
           >
             ARTHASEE
           </span>
@@ -58,12 +78,12 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="nav-link text-white text-[13px] font-medium tracking-wide"
-              
+
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </nav>
@@ -72,7 +92,7 @@ export default function Header() {
         <a
           href="#"
           className="hidden lg:flex btn-press items-center bg-[#0a5b34] text-white text-[13px] font-semibold px-5 py-[10px] rounded-[5px]"
-          
+
         >
           GET IN TOUCH
         </a>
@@ -122,19 +142,19 @@ export default function Header() {
         <nav className="flex flex-col px-5 py-4 gap-4">
           {navLinks.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="text-white text-[14px] font-medium py-1 border-b border-[#222] last:border-0"
               onClick={() => setMenuOpen(false)}
-              
+
             >
-              {link}
+              {link.label}
             </a>
           ))}
           <a
             href="#"
             className="btn-press mt-1 bg-[#0a5b34] text-white text-[13px] font-semibold px-5 py-[10px] rounded-[5px] text-center"
-            
+
           >
             GET IN TOUCH
           </a>

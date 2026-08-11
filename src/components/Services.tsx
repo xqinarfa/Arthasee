@@ -1,6 +1,6 @@
-const imgDivServiceCard = "http://localhost:3845/assets/cc694dfb24d4bbaa70e8ca66c499a78ea28a2690.png";
-const imgDivServiceCard1 = "http://localhost:3845/assets/42199c35d156d4695b2ed902deaed59dca645f1c.png";
-const imgDivServiceCard2 = "http://localhost:3845/assets/515a7eec020c6f617e6c96fb695b892caaea351a.png";
+const imgDivServiceCard = "/assets/service-card-1.png";
+const imgDivServiceCard1 = "/assets/service-card-2.png";
+const imgDivServiceCard2 = "/assets/service-card-3.png";
 
 const services = [
   {
@@ -22,7 +22,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative z-20 bg-white w-full overflow-hidden py-16 px-5 md:px-10 lg:px-20" data-name="section.services">
+    <section id="services" className="relative z-20 bg-white w-full overflow-hidden py-16 px-5 md:px-10 lg:px-20" data-name="section.services">
       {/* Watermark text */}
       <div
         className="absolute pointer-events-none select-none font-extrabold italic text-transparent opacity-[0.04] whitespace-nowrap"

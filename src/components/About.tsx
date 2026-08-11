@@ -1,10 +1,10 @@
-const imgMechanic = "http://localhost:3845/assets/047ca56654d12e3b9eb9cac71e1c3ae7a0ad53d9.png";
-const imgAfter = "http://localhost:3845/assets/6410a29c8157750d407e7ba523c547a0e63d11d8.svg";
+const imgMechanic = "/assets/about-mechanic.png";
+const imgAfter = "/assets/about-after-shape.svg";
 
 export default function About() {
   return (
-    <section className="relative z-20 bg-white w-full py-16 px-5 md:px-10 lg:px-20" data-name="section.about">
-      <div className="mx-auto max-w-310">
+    <section id="about" className="relative z-20 bg-white w-full py-16 px-5 md:px-10 lg:px-20" data-name="section.about">
+      <div className="mx-auto w-full">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text column */}
           <div className="reveal-left w-full lg:w-1/2 relative">
@@ -27,7 +27,7 @@ export default function About() {
             <div className="relative lg:pl-14">
               <p
                 className="text-[#0a5b34] font-semibold text-[13px] uppercase tracking-widest mb-3"
-                
+
               >
                 ABOUT US
               </p>

@@ -1,4 +1,4 @@
-const imgCar = "http://localhost:3845/assets/5c86e3e6fbe5bc45c4e409a270aa5455b1050a1d.png";
+const imgCar = "/assets/pricing-car.png";
 
 type PlanFeature = { text: string; included: boolean };
 
@@ -61,7 +61,7 @@ const plans: PricingPlan[] = [
 
 export default function Pricing() {
   return (
-    <section className="relative z-20 bg-white w-full py-20 px-5 md:px-10 lg:px-20" data-name="section.pricing">
+    <section id="pricing" className="relative z-20 bg-white w-full py-20 px-5 md:px-10 lg:px-20" data-name="section.pricing">
       {/* Watermark */}
       <div
         className="absolute pointer-events-none select-none font-extrabold italic text-transparent opacity-[0.04] whitespace-nowrap"

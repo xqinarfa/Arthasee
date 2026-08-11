@@ -17,7 +17,7 @@ export default function Home() {
   useScrollReveal();
 
   return (
-    <div className="flex flex-col items-start relative w-full overflow-x-clip">
+    <div>
       <Header />
       <Hero />
       <Stats />
