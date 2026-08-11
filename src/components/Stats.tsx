@@ -39,7 +39,7 @@ export default function Stats() {
               </div>
               <p
                 className="text-[#111] text-[13px] font-normal text-left tracking-wide"
-                
+
               >
                 {stat.label}
               </p>
