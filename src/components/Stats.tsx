@@ -12,9 +12,9 @@ if (typeof window !== "undefined") {
 const imgSubtract = "/assets/stats-subtract-bg.svg";
 
 const stats = [
-  { target: 10, suffix: "", unit: "+", label: "YEARS OF SERVICE" },
-  { target: 50, suffix: "K", unit: "+", label: "HAPPY CUSTOMERS" },
-  { target: 99, suffix: "", unit: "%", label: "CLIENT SATISFACTION" },
+  { target: 1, suffix: "", unit: "", label: "PLATFORM UNTUK BENGKEL" },
+  { target: 8, suffix: "+", unit: "", label: "FITUR MANAJEMEN" },
+  { target: 24, suffix: "/7", unit: "", label: "AKSES SISTEM" },
 ];
 
 function AnimatedStat({ stat, index }: { stat: typeof stats[0]; index: number }) {

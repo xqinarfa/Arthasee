@@ -89,7 +89,7 @@ export default function Hero() {
             className="hero-badge mb-3"
           >
             <span className="inline-block bg-[#0a5b34]/20 border border-[#0a5b34] text-[#59d677] text-xs font-semibold px-3 py-1 rounded-full tracking-wider uppercase">
-              Sistem Bengkel Modern
+              SISTEM MANAJEMEN BENGKEL TERINTEGRASI
             </span>
           </motion.div>
 
@@ -106,8 +106,8 @@ export default function Hero() {
                 fontSize: "clamp(32px, 5vw, 64px)",
               }}
             >
-              Sistem Manajemen<br />
-              <span className="text-[#59d677]">Bengkel</span> Terintegrasi
+              TAU KAPAN PELANGGAN<br />
+              <span className="text-[#59d677]">HARUS KEMBALI</span>
             </h1>
           </motion.div>
 
@@ -119,12 +119,12 @@ export default function Hero() {
             className="hero-subtitle mb-8 max-w-150"
           >
             <p
-              className="text-[#ccc] leading-relaxed"
+              className="text-[#ccc] text-justify leading-relaxed"
               style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
             >
-              Arthasee menyimpan data pelanggan, riwayat kendaraan, dan catatan servis bengkel Anda
-              di satu tempat — lalu memberi tahu unit mana yang sudah waktunya servis lagi.
-              Sesederhana itu, dan sudah bisa dipakai hari ini.
+              Arthasee membantu bengkel mengelola data pelanggan, kendaraan, 
+              riwayat servis, hingga proses pekerjaan dalam satu sistem 
+              yang sederhana dan mudah digunakan.
             </p>
           </motion.div>
 
@@ -136,20 +136,20 @@ export default function Hero() {
             className="hero-buttons flex flex-wrap gap-3"
           >
             <a
-              href="#"
+              href="#pricing"
               className="btn-press bg-[#0a5b34] text-white font-semibold text-sm px-6 py-3 rounded-[5px] inline-flex items-center gap-2"
             >
               MULAI GRATIS <span>→</span>
             </a>
             <a
-              href="#"
+              href="#services"
               className="btn-press border-2 border-white text-white font-semibold text-sm px-6 py-3 rounded-[5px] inline-flex items-center"
               style={{
                 '--hover-bg': '#fff',
                 '--hover-fg': '#111'
               } as React.CSSProperties}
             >
-              LIHAT YANG SUDAH JALAN
+              LIHAT FITUR UNGGULAN
             </a>
           </motion.div>
         </div>

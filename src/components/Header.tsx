@@ -40,13 +40,13 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menuOpen]);
 
-  const navLinks = [
-    { label: "HOME", href: "#home" },
-    { label: "SERVICES", href: "#services" },
-    { label: "ABOUT", href: "#about" },
-    { label: "PRICING", href: "#pricing" },
-    { label: "CONTACT", href: "#contact" },
-  ];
+const navLinks = [
+  { label: "BERANDA", href: "#home" },
+  { label: "LAYANAN", href: "#services" },
+  { label: "CERITA KAMI", href: "#about" },
+  { label: "CEK HARGA", href: "#pricing" },
+  { label: "HUBUNGI KAMI", href: "#contact" },
+];
 
   return (
     <header
@@ -94,7 +94,7 @@ export default function Header() {
           className="hidden lg:flex btn-press items-center bg-[#0a5b34] text-white text-[13px] font-semibold px-5 py-[10px] rounded-[5px]"
 
         >
-          GET IN TOUCH
+          COBA GRATIS
         </a>
 
         {/* Hamburger */}
