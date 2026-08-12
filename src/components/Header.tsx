@@ -56,7 +56,7 @@ const navLinks = [
         } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
       data-name="header.header"
     >
-      <div className="mx-auto flex items-center justify-between px-5 py-4 w-full">
+      <div className="mx-auto flex items-center justify-between px-16 py-4 w-full">
         {/* Logo */}
         <div className="flex items-center gap-2 shrink-0">
           <div className="relative size-[40px] shrink-0">
