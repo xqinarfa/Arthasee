@@ -10,12 +10,22 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
 
+const WORDS = ["PELANGGAN", "CUSTOMER", "KLIEN", "MEMBER"];
+
 const imgSectionHero = "/assets/hero-bg.png";
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % WORDS.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
 
   const words = ["Terintegrasi", "Modern", "Profesional"];
   const [wordIndex, setWordIndex] = useState(0);
@@ -124,23 +134,23 @@ export default function Hero() {
                 fontSize: "clamp(32px, 5vw, 64px)",
               }}
             >
-              Sistem Manajemen<br />
-              <span className="text-[#59d677] mr-2">Bengkel</span>
-              <span className="inline-grid overflow-hidden align-bottom">
-                <AnimatePresence>
+              TAU KAPAN{" "}
+              <span className="inline-grid overflow-hidden pb-2 -mb-2">
+                <AnimatePresence mode="popLayout">
                   <motion.span
-                    key={wordIndex}
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: "-100%", opacity: 0 }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="text-white whitespace-nowrap mr-2"
-                    style={{ gridArea: "1 / 1" }}
+                    key={WORDS[wordIndex]}
+                    initial={{ opacity: 0, y: 30, rotateX: -90 }}
+                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                    exit={{ opacity: 0, y: -30, rotateX: 90 }}
+                    transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+                    className="col-start-1 row-start-1 origin-center"
                   >
-                    {words[wordIndex]}
+                    {WORDS[wordIndex]}
                   </motion.span>
                 </AnimatePresence>
               </span>
+              <br />
+              <span className="text-[#59d677]">HARUS KEMBALI</span>
             </h1>
           </motion.div>
 
