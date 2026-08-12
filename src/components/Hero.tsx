@@ -86,6 +86,7 @@ export default function Hero() {
     });
   }, { scope: containerRef });
 
+
   return (
     <div>
       <section
@@ -163,8 +164,8 @@ export default function Hero() {
               className="text-[#ccc] text-justify leading-relaxed"
               style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
             >
-              Arthasee membantu bengkel mengelola data pelanggan, kendaraan, 
-              riwayat servis, hingga proses pekerjaan dalam satu sistem 
+              Arthasee membantu bengkel mengelola data pelanggan, kendaraan,
+              riwayat servis, hingga proses pekerjaan dalam satu sistem
               yang sederhana dan mudah digunakan.
             </p>
           </motion.div>
