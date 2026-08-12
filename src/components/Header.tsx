@@ -45,7 +45,6 @@ const navLinks = [
   { label: "LAYANAN", href: "#services" },
   { label: "CERITA KAMI", href: "#about" },
   { label: "CEK HARGA", href: "#pricing" },
-  { label: "HUBUNGI KAMI", href: "#contact" },
 ];
 
   return (
@@ -68,7 +67,6 @@ const navLinks = [
           </div>
           <span
             className="font-extrabold text-[22px] text-white tracking-[1px] leading-none"
-
           >
             ARTHASEE
           </span>

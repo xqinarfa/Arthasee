@@ -28,7 +28,6 @@ export default function Hero() {
   }, []);
 
   const words = ["Terintegrasi", "Modern", "Profesional"];
-  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
