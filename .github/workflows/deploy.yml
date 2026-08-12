@@ -17,7 +17,12 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /var/www/Arthasee || { echo "Directory not found"; exit 1; }
+            if [ ! -d "/var/www/Arthasee" ]; then
+              mkdir -p /var/www
+              cd /var/www
+              git clone https://github.com/xqinarfa/Arthasee.git
+            fi
+            cd /var/www/Arthasee
             git pull origin main
             docker compose down
             docker compose build

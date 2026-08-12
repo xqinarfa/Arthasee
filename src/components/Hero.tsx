@@ -28,7 +28,6 @@ export default function Hero() {
   }, []);
 
   const words = ["Terintegrasi", "Modern", "Profesional"];
-  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -165,8 +164,8 @@ export default function Hero() {
               className="text-[#ccc] text-justify leading-relaxed"
               style={{ fontSize: "clamp(14px, 1.8vw, 17px)" }}
             >
-              Arthasee membantu bengkel mengelola data pelanggan, kendaraan, 
-              riwayat servis, hingga proses pekerjaan dalam satu sistem 
+              Arthasee membantu bengkel mengelola data pelanggan, kendaraan,
+              riwayat servis, hingga proses pekerjaan dalam satu sistem
               yang sederhana dan mudah digunakan.
             </p>
           </motion.div>
