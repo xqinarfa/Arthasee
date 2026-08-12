@@ -25,18 +25,14 @@ export default function Services() {
     <section id="services" className="relative z-20 bg-white w-full overflow-hidden py-32 px-5 md:px-10 lg:px-16" data-name="section.services">
       {/* Watermark text */}
       <div
-        className="absolute pointer-events-none select-none font-extrabold italic text-transparent opacity-[0.04] whitespace-nowrap"
-        style={{
-          fontSize: "clamp(60px, 8vw, 96px)",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          color: "#333",
-          WebkitTextStroke: "1px #333",
-        }}
+        className="absolute pointer-events-none select-none top-10 right-5 md:right-16 z-0"
         aria-hidden
       >
-        OUR SERVICES
+        <div className="[word-break:break-word] flex flex-col font-extrabold italic justify-center leading-[0] opacity-35 text-[96px] text-transparent whitespace-nowrap"
+             style={{ WebkitTextStroke: "2px #E5E5E5" }}
+        >
+          <p className="leading-[normal]">OUR SERVICES</p>
+        </div>
       </div>
 
       <div className="relative mx-auto w-full">

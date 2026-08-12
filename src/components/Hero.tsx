@@ -25,7 +25,7 @@ function AnimatedHeading() {
   }, []);
 
   return (
-    <span className="inline-grid overflow-hidden pb-2 -mb-2">
+    <span className="inline-grid overflow-hidden py-2 -my-2 px-3 -mx-3">
       <AnimatePresence mode="popLayout">
         <motion.span
           key={WORDS[wordIndex]}
