@@ -61,7 +61,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <div
-              key={t.name}
+              key={i}
               className={`reveal card-hover bg-white rounded-[10px] p-7 flex flex-col gap-4 stagger-${i + 1}`}
               data-name="div.testimonial-card"
             >

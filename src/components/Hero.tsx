@@ -1,14 +1,16 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
+
+const WORDS = ["PELANGGAN", "CUSTOMER", "KLIEN", "MEMBER"];
 
 const imgSectionHero = "/assets/hero-bg.png";
 
@@ -16,6 +18,14 @@ export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % WORDS.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
 
   useGSAP(() => {
     // 1. Pin the Hero section so it stays fixed while the next section scrolls over it
@@ -106,7 +116,22 @@ export default function Hero() {
                 fontSize: "clamp(32px, 5vw, 64px)",
               }}
             >
-              TAU KAPAN PELANGGAN<br />
+              TAU KAPAN{" "}
+              <span className="inline-grid overflow-hidden pb-2 -mb-2">
+                <AnimatePresence mode="popLayout">
+                  <motion.span
+                    key={WORDS[wordIndex]}
+                    initial={{ opacity: 0, y: 30, rotateX: -90 }}
+                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                    exit={{ opacity: 0, y: -30, rotateX: 90 }}
+                    transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+                    className="col-start-1 row-start-1 origin-center"
+                  >
+                    {WORDS[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              <br />
               <span className="text-[#59d677]">HARUS KEMBALI</span>
             </h1>
           </motion.div>

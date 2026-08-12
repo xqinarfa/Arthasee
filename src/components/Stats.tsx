@@ -28,9 +28,13 @@ function AnimatedStat({ stat, index }: { stat: typeof stats[0]; index: number })
         {
           innerText: stat.target,
           duration: 2,
-          delay: 0.8 + (index * 0.2), // Start after hero animations
           ease: "power2.out",
           snap: { innerText: 1 },
+          scrollTrigger: {
+            trigger: numberRef.current,
+            start: "top 90%",
+            toggleActions: "play none none none"
+          }
         }
       );
     }
