@@ -6,7 +6,7 @@ const services = [
   {
     img: imgDivServiceCard,
     title: "Leads",
-    desc: "Catat calon pelanggan yang belum jadi servis — harga kemahalan, pikir-pikir dulu, dll. Jadi daftar follow-up, bukan hilang begitu saja.",
+    desc: "Catat calon pelanggan yang belum jadi servis, karena harga kemahalan, pikir-pikir dulu, dll. Jadi daftar follow-up, bukan hilang begitu saja.",
   },
   {
     img: imgDivServiceCard1,
@@ -16,7 +16,7 @@ const services = [
   {
     img: imgDivServiceCard2,
     title: "Estimasi",
-    desc: "Buat perkiraan harga sebelum kerja dimulai — belum menyentuh stok sama sekali sampai pelanggan benar-benar setuju.",
+    desc: "Buat perkiraan harga sebelum kerja dimulai, belum menyentuh stok sama sekali sampai pelanggan benar-benar setuju.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Services() {
         <div className="reveal flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div className="max-w-125">
             <p className="text-[#0a5b34] font-semibold text-[14px] uppercase tracking-widest mb-2"
-            >OUR SERVICES</p>
+            >LAYANAN KAMI</p>
             <h2
               className="font-bold text-[#333] uppercase leading-tight"
               style={{ fontSize: "clamp(26px, 4vw, 40px)" }}
@@ -100,8 +100,7 @@ export default function Services() {
                   {svc.title}
                 </h3>
                 <p
-                  className="text-white/80 text-[13px] leading-relaxed"
-
+                  className="text-white/80 text-[13px] text-justify leading-relaxed"
                 >
                   {svc.desc}
                 </p>
@@ -110,7 +109,7 @@ export default function Services() {
                   className="inline-flex items-center gap-1 text-white font-semibold text-[14px] mt-2 group"
 
                 >
-                  READ MORE
+                  Lihat Detail
                   <span
                     className="inline-block"
                     style={{ transition: "transform 200ms var(--ease-out)" }}
@@ -130,14 +129,7 @@ export default function Services() {
             className="btn-press bg-[#0a5b34] text-white text-[13px] font-semibold px-6 py-3 rounded-[5px]"
 
           >
-            BROWSE ALL SERVICES
-          </a>
-          <a
-            href="#"
-            className="btn-press bg-[#111] text-white text-[13px] font-semibold px-6 py-3 rounded-[5px]"
-            style={{ '--hover-bg': '#fff', '--hover-fg': '#111' } as React.CSSProperties}
-          >
-            BROWSE SERVICES
+            Lihat Semua Layanan
           </a>
         </div>
       </div>

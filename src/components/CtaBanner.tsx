@@ -48,13 +48,13 @@ export default function CtaBanner() {
               fontSize: "clamp(24px, 4vw, 40px)",
             }}
           >
-            Coba di bengkel Anda
+            SIAP MENGELOLA BENGKEL ANDA DENGAN LEBIH MUDAH?
           </h2>
           <p
             className="text-white/80 capitalize"
             style={{ fontSize: "clamp(14px, 1.6vw, 16px)" }}
           >
-            Gratis untuk mulai. Tidak perlu kartu kredit.
+            Mulai kelola pelanggan, kendaraan, dan riwayat servis bengkel Anda dalam satu sistem.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export default function CtaBanner() {
           className="reveal btn-press stagger-2 relative overflow-hidden bg-[#0a5b34] text-white text-[13px] font-semibold px-8 py-3 rounded-[5px]"
           
         >
-          UJI COBA GRATIS
+          COBA ARTHASEE GRATIS
         </a>
       </div>
     </section>

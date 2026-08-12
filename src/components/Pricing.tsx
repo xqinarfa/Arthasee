@@ -18,44 +18,48 @@ const plans: PricingPlan[] = [
     name: "STARTER",
     price: "Gratis",
     currency: "",
-    period: "PER CAR PER MONTH",
+    period: "UNTUK MEMULAI",
     features: [
-      { text: "Oil Change & Filter", included: true },
-      { text: "Tire Rotation", included: true },
-      { text: "Brake Inspection", included: false },
-      { text: "Engine Diagnostics", included: false },
+      { text: "Data Pelanggan", included: true },
+      { text: "Data Kendaraan", included: true },
+      { text: "Riwayat Servis", included: true },
+      { text: "Estimasi", included: false },
+      { text: "Laporan Bengkel", included: false },
     ],
     ctaColor: "#111",
-    ctaText: "GET STARTED",
+    ctaText: "MULAI GRATIS",
   },
   {
     name: "PROFESSIONAL",
     price: "Rp124.000",
     currency: "IDR",
-    period: "PER CAR PER MONTH",
+    period: "PER BULAN",
     features: [
-      { text: "Oil Change & Filter", included: true },
-      { text: "Tire Rotation", included: true },
-      { text: "Brake Inspection", included: true },
-      { text: "Engine Diagnostics", included: false },
+      { text: "Data Pelanggan", included: true },
+      { text: "Data Kendaraan", included: true },
+      { text: "Riwayat Servis", included: true },
+      { text: "Estimasi", included: true },
+      { text: "Work Order", included: true },
+      { text: "Invoice", included: true },
     ],
     ctaColor: "#59d677",
-    ctaText: "GET STARTED",
+    ctaText: "MULAI SEKARANG",
     highlight: true,
   },
   {
     name: "DELUXE",
     price: "Rp189.000",
     currency: "IDR",
-    period: "PER CAR PER MONTH",
+    period: "PER BULAN",
     features: [
-      { text: "Oil Change & Filter", included: true },
-      { text: "Tire Rotation", included: true },
-      { text: "Brake Inspection", included: true },
-      { text: "Engine Diagnostics", included: true },
+      { text: "Semua fitur Professional", included: true },
+      { text: "Pengelolaan Sparepart", included: true },
+      { text: "Laporan Bengkel", included: true },
+      { text: "Pengingat Servis", included: true },
+      { text: "Monitoring Operasional", included: true },
     ],
     ctaColor: "#111",
-    ctaText: "GET STARTED",
+    ctaText: "MULAI SEKARANG",
   },
 ];
 
@@ -84,7 +88,7 @@ export default function Pricing() {
             className="font-bold text-[#333] leading-tight"
             style={{ fontSize: "clamp(24px, 4vw, 40px)" }}
           >
-            PACKAGES FOR ALL<br />TYPES OF CARS
+            PAKET SESUAI <br />KEBUTUHAN BENGKEL
           </h2>
         </div>
 

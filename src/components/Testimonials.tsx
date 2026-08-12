@@ -4,21 +4,24 @@ const imgAuthor2 = "/assets/testimonial-author-3.png";
 
 const testimonials = [
   {
-    quote: "\"This team is incredible. They got my car fixed faster than I expected. Highly recommend!\"",
-    name: "JOHN DOE",
-    role: "CEO, TechCorp",
+    quote:
+      "Sejak menggunakan Arthasee, pengelolaan data pelanggan dan kendaraan di bengkel kami jadi jauh lebih rapi dan mudah.",
+    name: "NAMA PENGGUNA",
+    role: "Pemilik Bengkel",
     img: imgAuthor,
   },
   {
-    quote: "\"Excellent service and very professional. I trust them with all my vehicles.\"",
-    name: "JANE SMITH",
-    role: "Marketing Manager",
+    quote:
+      "Arthasee membantu kami mencatat riwayat servis dan pekerjaan dengan lebih teratur. Informasi yang dibutuhkan jadi lebih mudah ditemukan.",
+    name: "NAMA PENGGUNA",
+    role: "Kepala Bengkel",
     img: imgAuthor1,
   },
   {
-    quote: "\"Great prices and quality work. My car runs like new again.\"",
-    name: "MIKE JOHNSON",
-    role: "Freelancer",
+    quote:
+      "Sistemnya sederhana dan mudah digunakan. Kami jadi lebih terbantu dalam mengelola operasional bengkel sehari-hari.",
+    name: "NAMA PENGGUNA",
+    role: "Pemilik Bengkel",
     img: imgAuthor2,
   },
 ];
@@ -34,7 +37,7 @@ export default function Testimonials() {
               className="font-bold text-white leading-tight"
               style={{ fontSize: "clamp(24px, 4vw, 40px)" }}
             >
-              WHAT OUR CLIENTS<br />SAY ABOUT US
+              APA KATA PENGGUNA <br />TENTANG ARTHASEE?
             </h2>
           </div>
           <div className="flex items-center gap-3 shrink-0">
@@ -67,7 +70,7 @@ export default function Testimonials() {
 
               {/* Quote */}
               <p
-                className="text-[#333] text-[14px] leading-relaxed flex-1"
+                className="text-[#333] text-[14px] text-justify leading-relaxed flex-1"
                 
               >
                 {t.quote}
@@ -75,13 +78,6 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-1">
-                <div className="relative rounded-full size-[48px] overflow-hidden shrink-0">
-                  <img
-                    alt={t.name}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    src={t.img}
-                  />
-                </div>
                 <div>
                   <p className="text-[#333] font-bold text-[13px]" >
                     {t.name}

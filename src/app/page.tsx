@@ -24,10 +24,10 @@ export default function Home() {
       <Services />
       <Features />
       <About />
-      <CtaBanner />
       <Testimonials />
       <Pricing />
-      <CtaBanner2 />
+      {/* <CtaBanner2 /> */}
+      <CtaBanner />
       <Footer />
     </div>
   );

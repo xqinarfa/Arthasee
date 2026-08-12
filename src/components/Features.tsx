@@ -4,18 +4,18 @@ const imgRectangle4 = "/assets/feature-img-overlay.svg";
 const features = [
   {
     icon: "✓",
-    title: "100% QUALITY PARTS",
-    desc: "We use only the highest quality parts for all repairs to ensure durability.",
+    title: "OPERASIONAL LEBIH RAPI",
+    desc: "Atur proses kerja bengkel dan kelola informasi penting tanpa harus bergantung pada pencatatan manual.",
   },
   {
     icon: "⚙",
-    title: "CERTIFIED MECHANICS",
-    desc: "Our team consists of certified professionals with years of experience.",
+    title: "SEMUA DATA TERPUSAT",
+    desc: "Data pelanggan, kendaraan, servis, estimasi, hingga riwayat pekerjaan tersimpan dalam satu sistem.",
   },
   {
     icon: "★",
-    title: "SATISFACTION GUARANTEE",
-    desc: "We guarantee our work. If you're not satisfied, we'll make it right.",
+    title: "BANTU PELANGGAN KEMBALI",
+    desc: "Gunakan riwayat servis dan pengingat untuk membantu menjaga hubungan dengan pelanggan setelah servis selesai.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Features() {
                   fontSize: "clamp(26px, 4vw, 40px)",
                 }}
               >
-                WHAT MAKES US<br />DIFFERENT
+                KENAPA MEMILIH <span className="text-[#59d677]">ARTHASEE</span>?
               </h2>
             </div>
 
@@ -58,7 +58,7 @@ export default function Features() {
               {features.map((f, i) => (
                 <li
                   key={f.title}
-                  className={`reveal flex gap-4 items-start stagger-${i + 1}`}
+                  className={`reveal text-justify flex gap-4 items-start stagger-${i + 1}`}
                 >
                   <div
                     className="shrink-0 w-8 h-8 rounded-full bg-[#0a5b34]/20 border border-[#0a5b34] flex items-center justify-center text-[#0a5b34] font-bold text-sm mt-0.5"
@@ -82,14 +82,6 @@ export default function Features() {
                 </li>
               ))}
             </ul>
-
-            <a
-              href="#"
-              className="btn-press self-start bg-[#0a5b34] text-white text-[13px] font-semibold px-6 py-3 rounded-[5px]"
-              
-            >
-              LEARN ABOUT MORE
-            </a>
           </div>
         </div>
       </div>

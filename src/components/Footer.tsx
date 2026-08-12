@@ -1,6 +1,17 @@
 export default function Footer() {
-  const quickLinks = ["About", "Services", "Pricing", "Blog"];
-  const companyLinks = ["Our Team", "Career", "Testimonials", "Contact"];
+  const quickLinks = [
+    "Beranda",
+    "Layanan",
+    "Cerita Kami",
+    "Harga",
+  ];
+
+  const companyLinks = [
+    "Tentang Kami",
+    "Fitur",
+    "Testimoni",
+    "Hubungi Kami",
+  ];
 
   return (
     <footer id="contact" className="relative z-20 bg-zinc-950 w-full pt-16 pb-6 px-5 md:px-10 lg:px-20" data-name="section.footer">
@@ -10,7 +21,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#0a5b34] text-2xl">&#xF5E4;</span>
+              {/* <span className="text-[#0a5b34] text-2xl">&#xF5E4;</span> */}
               <span
                 className="text-white font-extrabold text-[20px] tracking-[1px]"
                 
@@ -19,10 +30,12 @@ export default function Footer() {
               </span>
             </div>
             <p
-              className="text-[#aaa] text-[13px] leading-relaxed max-w-[260px]"
+              className="text-[#aaa] text-[13px] text-justify leading-relaxed max-w-[260px]"
               
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sistem manajemen bengkel yang membantu Anda mengelola
+              pelanggan, kendaraan, dan riwayat servis dengan lebih
+              mudah dan teratur.
             </p>
           </div>
 
@@ -32,7 +45,7 @@ export default function Footer() {
               className="text-white font-bold text-[15px] mb-4"
               
             >
-              QUICK LINKS
+              TAUTAN
             </h4>
             <ul className="flex flex-col gap-3">
               {quickLinks.map((link) => (
@@ -55,7 +68,7 @@ export default function Footer() {
               className="text-white font-bold text-[15px] mb-4"
               
             >
-              COMPANY
+              ARTHASEE
             </h4>
             <ul className="flex flex-col gap-3">
               {companyLinks.map((link) => (
@@ -78,11 +91,11 @@ export default function Footer() {
               className="text-white font-bold text-[15px] mb-4"
               
             >
-              CONTACT US
+              HUBUNGI KAMI
             </h4>
             <ul className="flex flex-col gap-3">
               {[
-                { icon: "📞", text: "+1 555 010 2023" },
+                { icon: "📞", text: "+62 555 010 2023" },
                 { icon: "✉", text: "info@autocarx.com" },
                 { icon: "📍", text: "1234 Tech Street, Santa Monica" },
               ].map((item) => (
@@ -106,7 +119,7 @@ export default function Footer() {
             className="text-[#aaa] text-[13px] text-center sm:text-left"
             
           >
-            © 2026 AUTOCARX. ALL RIGHTS RESERVED.
+            © 2026 ARTHASEE. HAK CIPTA DILINDUNGI.
           </p>
           <div className="flex items-center gap-3">
             {[
