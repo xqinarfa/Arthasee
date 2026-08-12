@@ -22,7 +22,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative z-20 bg-white w-full overflow-hidden py-16 px-5 md:px-10 lg:px-20" data-name="section.services">
+    <section id="services" className="relative z-20 bg-white w-full overflow-hidden py-32 px-5 md:px-10 lg:px-16" data-name="section.services">
       {/* Watermark text */}
       <div
         className="absolute pointer-events-none select-none font-extrabold italic text-transparent opacity-[0.04] whitespace-nowrap"
@@ -39,12 +39,12 @@ export default function Services() {
         OUR SERVICES
       </div>
 
-      <div className="relative mx-auto max-w-310">
+      <div className="relative mx-auto w-full">
         {/* Header */}
         <div className="reveal flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div className="max-w-125">
             <p className="text-[#0a5b34] font-semibold text-[14px] uppercase tracking-widest mb-2"
-              >Layanan Kami</p>
+            >LAYANAN KAMI</p>
             <h2
               className="font-bold text-[#333] uppercase leading-tight"
               style={{ fontSize: "clamp(26px, 4vw, 40px)" }}
@@ -95,20 +95,19 @@ export default function Services() {
               <div className="relative p-5 flex flex-col gap-2">
                 <h3
                   className="font-bold text-white text-[17px] uppercase"
-                  
+
                 >
                   {svc.title}
                 </h3>
                 <p
                   className="text-white/80 text-[13px] text-justify leading-relaxed"
-                  
                 >
                   {svc.desc}
                 </p>
                 <a
                   href="#"
                   className="inline-flex items-center gap-1 text-white font-semibold text-[14px] mt-2 group"
-                  
+
                 >
                   Lihat Detail
                   <span
@@ -128,7 +127,7 @@ export default function Services() {
           <a
             href="#"
             className="btn-press bg-[#0a5b34] text-white text-[13px] font-semibold px-6 py-3 rounded-[5px]"
-            
+
           >
             Lihat Semua Layanan
           </a>
