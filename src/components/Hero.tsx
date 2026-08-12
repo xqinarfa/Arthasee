@@ -12,6 +12,7 @@ if (typeof window !== "undefined") {
 
 
 const imgSectionHero = "/assets/hero-bg.png";
+const WORDS = ["PELANGGAN", "KENDARAAN", "SERVIS", "MOTOR"];
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -86,28 +87,9 @@ export default function Hero() {
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 mx-auto max-w-310 px-5 flex flex-col justify-center h-full"
+        className="relative z-10 mx-auto w-full min-h-screen max-w-310 px-5 flex flex-col justify-center h-full"
         style={{ minHeight: "clamp(480px, 60vh, 721px)", paddingTop: "clamp(80px, 12vw, 150px)", paddingBottom: "clamp(160px, 15vw, 220px)" }}
       >
-        {/* Background image */}
-        <div aria-hidden className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute inset-0 overflow-hidden">
-            <img
-              alt=""
-              className="absolute w-full max-w-none object-cover"
-              style={{ height: "133%", top: "-16%" }}
-              src={imgSectionHero}
-            />
-          </div>
-          <div ref={bgRef} className="absolute inset-0 bg-black/50" />
-        </div>
-
-        {/* Content */}
-        <div
-          ref={contentRef}
-          className="relative z-10 mx-auto w-full min-h-screen px-5 flex flex-col justify-center"
-          style={{ paddingTop: "clamp(80px, 12vw, 150px)", paddingBottom: "clamp(160px, 15vw, 220px)" }}
-        >
           {/* Badge */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -195,7 +177,6 @@ export default function Hero() {
             </a>
           </motion.div>
         </div>
-      </section>
-    </div>
+    </section>
   );
 }
