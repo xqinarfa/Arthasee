@@ -14,7 +14,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="relative z-20 bg-zinc-950 w-full pt-16 pb-6 px-5 md:px-10 lg:px-20" data-name="section.footer">
+    <footer className="relative z-20 bg-zinc-950 w-full pt-16 pb-6 px-5 md:px-10 lg:px-20" data-name="section.footer">
       <div className="mx-auto max-w-[1240px]">
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-[#333]">
