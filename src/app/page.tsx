@@ -17,17 +17,17 @@ export default function Home() {
   useScrollReveal();
 
   return (
-    <div className="flex flex-col items-start relative w-full overflow-x-clip">
+    <div>
       <Header />
       <Hero />
       <Stats />
       <Services />
       <Features />
       <About />
-      <CtaBanner />
       <Testimonials />
       <Pricing />
-      <CtaBanner2 />
+      {/* <CtaBanner2 /> */}
+      <CtaBanner />
       <Footer />
     </div>
   );
