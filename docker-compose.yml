@@ -5,7 +5,7 @@ services:
     build: .
     container_name: arthasee
     ports:
-      - "3000:3000"
+      - "8086:3000"
     restart: always
     environment:
       - NODE_ENV=production
