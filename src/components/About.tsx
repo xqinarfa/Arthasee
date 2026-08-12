@@ -13,15 +13,14 @@ export default function About() {
 
             {/* Watermark */}
             <div
-              className="absolute -top-6 -left-4 font-extrabold italic opacity-[0.06] whitespace-nowrap select-none pointer-events-none hidden lg:block"
-              style={{
-                fontSize: "72px",
-                color: "transparent",
-                WebkitTextStroke: "1px #333",
-              }}
+              className="absolute pointer-events-none select-none -top-12 left-20 lg:left-[190px] hidden md:block z-0 overflow-hidden"
               aria-hidden
             >
-              ABOUT US
+              <div className="[word-break:break-word] flex flex-col font-extrabold italic justify-center leading-[0] opacity-35 text-[96px] text-transparent whitespace-nowrap"
+                   style={{ WebkitTextStroke: "2px #E5E5E5" }}
+              >
+                <p className="leading-[normal]">ABOUT US</p>
+              </div>
             </div>
 
             <div className="relative lg:pl-14">

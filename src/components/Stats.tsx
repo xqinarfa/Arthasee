@@ -52,7 +52,11 @@ function AnimatedStat({ stat, index }: { stat: typeof stats[0]; index: number })
         }}
       >
         <span className="text-[#111]">
-          <span ref={numberRef}>0</span>{stat.suffix}
+          <span ref={numberRef}>0</span>
+          <span className="text-[#0a5b34]">{stat.suffix.charAt(0)}</span>
+          {stat.suffix.slice(1) && (
+            <span className="text-[#111]">{stat.suffix.slice(1)}</span>
+          )}
         </span>
         <span className="text-[#0a5b34] ml-1">{stat.unit}</span>
       </div>
