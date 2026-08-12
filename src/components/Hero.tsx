@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -16,6 +16,16 @@ export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
+
+  const words = ["Terintegrasi", "Modern", "Profesional"];
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % words.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
 
   useGSAP(() => {
     // 1. Pin the Hero section so it stays fixed while the next section scrolls over it
@@ -65,10 +75,18 @@ export default function Hero() {
         {/* Background image */}
         <div aria-hidden className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 overflow-hidden">
-            <img
+            <motion.img
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.08 }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              }}
               alt=""
-              className="absolute w-full max-w-none object-cover"
-              style={{ height: "133%", top: "-16%" }}
+              className="absolute w-full h-full max-w-none object-cover origin-center"
+              style={{ height: "100%", top: "-8%" }}
               src={imgSectionHero}
             />
           </div>
@@ -78,11 +96,11 @@ export default function Hero() {
         {/* Content */}
         <div
           ref={contentRef}
-          className="relative z-10 mx-auto w-full min-h-screen px-5 flex flex-col justify-center"
+          className="relative z-10 mx-auto w-full min-h-screen px-16 flex flex-col justify-center"
           style={{ paddingTop: "clamp(80px, 12vw, 150px)", paddingBottom: "clamp(160px, 15vw, 220px)" }}
         >
           {/* Badge */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -94,25 +112,40 @@ export default function Hero() {
           </motion.div>
 
           {/* Heading */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="hero-title mb-4"
           >
             <h1
-              className="font-bold italic text-white leading-tight"
+              className="font-bold italic text-white leading-tight flex flex-col items-start sm:block"
               style={{
                 fontSize: "clamp(32px, 5vw, 64px)",
               }}
             >
               Sistem Manajemen<br />
-              <span className="text-[#59d677]">Bengkel</span> Terintegrasi
+              <span className="text-[#59d677] mr-2">Bengkel</span>
+              <span className="inline-grid overflow-hidden align-bottom">
+                <AnimatePresence>
+                  <motion.span
+                    key={wordIndex}
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: "-100%", opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="text-white whitespace-nowrap mr-2"
+                    style={{ gridArea: "1 / 1" }}
+                  >
+                    {words[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </h1>
           </motion.div>
 
           {/* Subtitle */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
@@ -129,7 +162,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Buttons */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
