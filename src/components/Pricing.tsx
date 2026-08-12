@@ -1,4 +1,4 @@
-const imgCar = "http://localhost:3845/assets/5c86e3e6fbe5bc45c4e409a270aa5455b1050a1d.png";
+const imgCar = "/assets/pricing-car.png";
 
 type PlanFeature = { text: string; included: boolean };
 

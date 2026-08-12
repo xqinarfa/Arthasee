@@ -1,4 +1,4 @@
-const imgSectionCtaBanner = "http://localhost:3845/assets/8bb79c980d3eec52ba76016450910763048839cc.png";
+const imgSectionCtaBanner = "/assets/cta-bg.png";
 
 export default function CtaBanner() {
   return (

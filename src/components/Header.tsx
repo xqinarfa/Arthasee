@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const imgArthaseeLogo11 = "http://localhost:3845/assets/e15874c83da0e544d9e1c3c8cdb677e0bfd25054.png";
+const imgArthaseeLogo11 = "/assets/logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

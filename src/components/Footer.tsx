@@ -10,7 +10,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#0a5b34] text-2xl">&#xF5E4;</span>
+              <div className="relative size-[40px] shrink-0">
+                <img
+                  alt="Arthasee Logo"
+                  className="absolute inset-0 max-w-none object-cover size-full pointer-events-none"
+                  src="/assets/logo.png"
+                />
+              </div>
               <span
                 className="text-white font-extrabold text-[20px] tracking-[1px]"
                 

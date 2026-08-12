@@ -1,5 +1,5 @@
-const imgMechanic = "http://localhost:3845/assets/047ca56654d12e3b9eb9cac71e1c3ae7a0ad53d9.png";
-const imgAfter = "http://localhost:3845/assets/6410a29c8157750d407e7ba523c547a0e63d11d8.svg";
+const imgMechanic = "/assets/about-mechanic.png";
+const imgAfter = "/assets/about-after-shape.svg";
 
 export default function About() {
   return (

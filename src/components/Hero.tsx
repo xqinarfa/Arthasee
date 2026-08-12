@@ -9,7 +9,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
 
-const imgSectionHero = "http://localhost:3845/assets/ef5ddc4b999983f2219863da9f0623098e3a7e45.png";
+const imgSectionHero = "/assets/hero-bg.png";
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -70,7 +70,7 @@ export default function Hero() {
             src={imgSectionHero}
           />
         </div>
-        <div ref={bgRef} className="absolute inset-0 bg-black/50" />
+        <div ref={bgRef} className="absolute inset-0 bg-black/25" />
       </div>
 
       {/* Content */}

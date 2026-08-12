@@ -1,4 +1,4 @@
-const imgSubtract = "http://localhost:3845/assets/cab96f21e98237bd08dbb3dcc557cb2fd8f0f217.svg";
+const imgSubtract = "/assets/stats-subtract-bg.svg";
 
 const stats = [
   { value: "10", unit: "+", label: "YEARS OF SERVICE" },

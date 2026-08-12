@@ -1,6 +1,6 @@
-const imgAuthor = "http://localhost:3845/assets/77d7c2aa5af2b01065ce472ea457d75ff90cde9a.png";
-const imgAuthor1 = "http://localhost:3845/assets/c5335e3a36c8ad116270d023e0c101b8dead9808.png";
-const imgAuthor2 = "http://localhost:3845/assets/7548ca1541b59be41aff18944cf7749d7101aa8d.png";
+const imgAuthor = "/assets/testimonial-author-1.png";
+const imgAuthor1 = "/assets/testimonial-author-2.png";
+const imgAuthor2 = "/assets/testimonial-author-3.png";
 
 const testimonials = [
   {
