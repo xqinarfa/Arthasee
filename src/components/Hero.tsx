@@ -14,10 +14,7 @@ if (typeof window !== "undefined") {
 const imgSectionHero = "/assets/hero-bg.png";
 const WORDS = ["PELANGGAN", "KENDARAAN", "SERVIS", "MOTOR"];
 
-export default function Hero() {
-  const containerRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
+function AnimatedHeading() {
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
@@ -26,6 +23,29 @@ export default function Hero() {
     }, 2500);
     return () => clearInterval(interval);
   }, []);
+
+  return (
+    <span className="inline-grid overflow-hidden pb-2 -mb-2">
+      <AnimatePresence mode="popLayout">
+        <motion.span
+          key={WORDS[wordIndex]}
+          initial={{ opacity: 0, y: 30, rotateX: -90 }}
+          animate={{ opacity: 1, y: 0, rotateX: 0 }}
+          exit={{ opacity: 0, y: -30, rotateX: 90 }}
+          transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+          className="col-start-1 row-start-1 origin-center"
+        >
+          {WORDS[wordIndex]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
+
+export default function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
 
 
 
@@ -94,9 +114,6 @@ export default function Hero() {
           </div>
           <div ref={bgRef} className="absolute inset-0 bg-black/50" />
         </div>
-        <div ref={bgRef} className="absolute inset-0 bg-black/25" />
-      </div>
-
         {/* Content */}
         <div
           ref={contentRef}
@@ -129,20 +146,7 @@ export default function Hero() {
               }}
             >
               TAU KAPAN{" "}
-              <span className="inline-grid overflow-hidden pb-2 -mb-2">
-                <AnimatePresence mode="popLayout">
-                  <motion.span
-                    key={WORDS[wordIndex]}
-                    initial={{ opacity: 0, y: 30, rotateX: -90 }}
-                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                    exit={{ opacity: 0, y: -30, rotateX: 90 }}
-                    transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
-                    className="col-start-1 row-start-1 origin-center"
-                  >
-                    {WORDS[wordIndex]}
-                  </motion.span>
-                </AnimatePresence>
-              </span>
+              <AnimatedHeading />
               <br />
               <span className="text-[#59d677]">HARUS KEMBALI</span>
             </h1>
