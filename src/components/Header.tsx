@@ -88,9 +88,8 @@ const navLinks = [
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <a
-          href="#"
+          href="/login"
           className="hidden lg:flex btn-press items-center bg-[#0a5b34] text-white text-[13px] font-semibold px-5 py-[10px] rounded-[5px]"
 
         >

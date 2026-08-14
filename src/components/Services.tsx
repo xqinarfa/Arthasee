@@ -91,28 +91,29 @@ export default function Services() {
               <div className="relative p-5 flex flex-col gap-2">
                 <h3
                   className="font-bold text-white text-[17px] uppercase"
-
                 >
                   {svc.title}
                 </h3>
                 <p
-                  className="text-white/80 text-[13px] text-justify leading-relaxed"
+                  className="text-white/80 text-[13px] text-justify leading-relaxed pt-1"
                 >
                   {svc.desc}
                 </p>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1 text-white font-semibold text-[14px] mt-2 group"
-
-                >
-                  Lihat Detail
-                  <span
-                    className="inline-block"
-                    style={{ transition: "transform 200ms var(--ease-out)" }}
-                  >
-                    →
-                  </span>
-                </a>
+                <div className="grid grid-rows-[0fr] opacity-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 transition-all duration-700 ease-[var(--ease-in-out)]">
+                  <div className="overflow-hidden flex flex-col translate-y-2 group-hover:translate-y-0 transition-transform duration-700 ease-[var(--ease-in-out)]">
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-1 text-white font-semibold text-[14px] mt-1 group/link w-fit"
+                    >
+                      Lihat Detail
+                      <span
+                        className="inline-block transition-transform duration-500 ease-[var(--ease-in-out)] group-hover/link:translate-x-1"
+                      >
+                        →
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
